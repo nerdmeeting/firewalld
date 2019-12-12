@@ -1,0 +1,17 @@
+---
+
+- name: Enable remote httpd connection
+  shell: setsebool httpd_can_network_connect on -P
+  when: allow_remote_port_80 or allow_remote_port_8080
+
+- name: Open port 80 for remote access
+  when: allow_remote_port_80
+  notify: reload firewall-cmd
+  shell: |
+    firewall-cmd --zone=public --add-port=80/tcp --permanent
+
+- name: Open port 8080 for remote access
+  when: allow_remote_port_8080
+  notify: reload firewall-cmd
+  shell: |
+    firewall-cmd --zone=public --add-port=8080/tcp --permanent
