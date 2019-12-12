@@ -1,0 +1,15 @@
+galaxy_info:
+  role_name: nerdmeeting_firewalld
+  author: nerdmeeting
+  description: Allow remote HTTP access to Centos 7 VM
+  license: license (BSD, MIT)
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+  galaxy_tags:
+    - firewall
+    - firewalld
+    - remote
