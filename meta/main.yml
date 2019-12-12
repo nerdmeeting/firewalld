@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: nerdmeeting_firewalld
+  role_name: firewalld
   author: nerdmeeting
   description: Allow remote HTTP access to Centos 7 VM
   license: license (BSD, MIT)
