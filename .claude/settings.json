@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/projects/nerdmeeting/nerdmeeting-rules/hooks/jira-link-check.py"
+          }
+        ]
+      }
+    ]
+  }
+}
